@@ -53,7 +53,7 @@
         <ProgressBar x:Name="ProgressBar" HorizontalAlignment="Left" Height="19" Margin="124,308,0,0" VerticalAlignment="Top" Width="212"/>
         <Label Content="Ende" HorizontalAlignment="Left" Margin="341,301,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.028,0.538"/>
         <Label Content="Anfang" HorizontalAlignment="Left" Margin="71,301,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnSubmit" Content="Weiter" HorizontalAlignment="Left" Margin="341,252,0,0" VerticalAlignment="Top" Width="75" FontSize="16" FontWeight="Bold">
+        <Button x:Name="btnSubmit" Content="Weiter" HorizontalAlignment="Left" Margin="341,252,0,0" VerticalAlignment="Top" Width="75" FontSize="16" FontWeight="Bold" Click="btnSubmit_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFEDEFF3" Offset="0"/>
