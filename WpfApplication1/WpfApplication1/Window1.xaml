@@ -3,9 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Window1" Height="305" Width="399">
     <Grid>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Width="122" Height="17" Margin="143,164,0,93"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Width="122" Height="17" Margin="143,142,0,115"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Width="122" Height="17" Margin="143,186,0,71"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Width="122" Height="17" Margin="143,213,0,44"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFF3E5E5" Offset="0"/>
+                <GradientStop Color="#FFEC4A4A" Offset="0.903"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <RadioButton x:Name="radAnt2" Content="RadioButton" HorizontalAlignment="Left" Width="129" Margin="202,177,0,76" FontSize="14"/>
+        <RadioButton x:Name="radAnt1" Content="RadioButton" HorizontalAlignment="Left" Width="129" Margin="202,151,0,102" FontSize="14"/>
+        <RadioButton x:Name="radAnt3" Content="RadioButton" HorizontalAlignment="Left" Width="129" Margin="202,203,0,49" FontSize="14"/>
+        <RadioButton x:Name="radAnt4" Content="RadioButton" HorizontalAlignment="Left" Width="129" Margin="202,230,0,23" FontSize="14"/>
+        <Label x:Name="lblFrage" Content="Welche Frage steht hier?" HorizontalAlignment="Left" Margin="11,86,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label x:Name="lblFragestat" Content="Frage" HorizontalAlignment="Left" Margin="120,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblFragenummer" Content="1" HorizontalAlignment="Left" Margin="189,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTrenn" Content="/" HorizontalAlignment="Left" Margin="210,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblFragemenge" Content="20" HorizontalAlignment="Left" Margin="230,10,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
