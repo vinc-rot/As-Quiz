@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Krebs_DB012Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Während der Generierung sind Fehler aufgetreten:
+Warnung 6002: Für Tabelle/Sicht 'Krebs_DB012.db_ddladmin.T_Fragebogen_unter_Maschine' ist kein Primärschlüssel definiert. Der Schlüssel wurde abgeleitet, und die Definition wurde als schreibgeschützte Tabelle/Sicht erstellt.-->
+        <EntityType Name="T_Fragebogen_unter_Maschine">
+          <Key>
+            <PropertyRef Name="FragebogenNr" />
+            <PropertyRef Name="F_Id_SBF_Binnen" />
+          </Key>
+          <Property Name="FragebogenNr" Type="int" Nullable="false" />
+          <Property Name="F_Id_SBF_Binnen" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_SBF_Binnen">
+          <Key>
+            <PropertyRef Name="P_Id" />
+          </Key>
+          <Property Name="P_Id" Type="int" Nullable="false" />
+          <Property Name="Frage" Type="varchar" MaxLength="500" />
+          <Property Name="Antwort1" Type="varchar" MaxLength="500" />
+          <Property Name="Antwort2" Type="varchar" MaxLength="500" />
+          <Property Name="Antwort3" Type="varchar" MaxLength="500" />
+          <Property Name="Antwort4" Type="varchar" MaxLength="500" />
+          <Property Name="RichtigeAntwort" Type="tinyint" />
+        </EntityType>
+        <Association Name="F_Id_SBF_Binnen">
+          <End Role="T_SBF_Binnen" Type="Self.T_SBF_Binnen" Multiplicity="1" />
+          <End Role="T_Fragebogen_unter_Maschine" Type="Self.T_Fragebogen_unter_Maschine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_SBF_Binnen">
+              <PropertyRef Name="P_Id" />
+            </Principal>
+            <Dependent Role="T_Fragebogen_unter_Maschine">
+              <PropertyRef Name="F_Id_SBF_Binnen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="Krebs_DB012ModelStoreContainer">
+          <EntitySet Name="T_SBF_Binnen" EntityType="Self.T_SBF_Binnen" Schema="db_ddladmin" store:Type="Tables" />
+          <EntitySet Name="T_Fragebogen_unter_Maschine" EntityType="Self.T_Fragebogen_unter_Maschine" store:Type="Tables" store:Schema="db_ddladmin">
+            <DefiningQuery>SELECT 
+    [T_Fragebogen_unter_Maschine].[FragebogenNr] AS [FragebogenNr], 
+    [T_Fragebogen_unter_Maschine].[F_Id_SBF_Binnen] AS [F_Id_SBF_Binnen]
+    FROM [db_ddladmin].[T_Fragebogen_unter_Maschine] AS [T_Fragebogen_unter_Maschine]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="F_Id_SBF_Binnen" Association="Self.F_Id_SBF_Binnen">
+            <End Role="T_SBF_Binnen" EntitySet="T_SBF_Binnen" />
+            <End Role="T_Fragebogen_unter_Maschine" EntitySet="T_Fragebogen_unter_Maschine" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Krebs_DB012Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="T_SBF_Binnen">
+          <Key>
+            <PropertyRef Name="P_Id" />
+          </Key>
+          <Property Name="P_Id" Type="Int32" Nullable="false" />
+          <Property Name="Frage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Antwort1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Antwort2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Antwort3" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Antwort4" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="RichtigeAntwort" Type="Byte" />
+          <NavigationProperty Name="T_Fragebogen_unter_Maschine" Relationship="Self.F_Id_SBF_Binnen" FromRole="T_SBF_Binnen" ToRole="T_Fragebogen_unter_Maschine" />
+        </EntityType>
+        <EntityType Name="T_Fragebogen_unter_Maschine">
+          <Key>
+            <PropertyRef Name="FragebogenNr" />
+            <PropertyRef Name="F_Id_SBF_Binnen" />
+          </Key>
+          <Property Name="FragebogenNr" Type="Int32" Nullable="false" />
+          <Property Name="F_Id_SBF_Binnen" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_SBF_Binnen" Relationship="Self.F_Id_SBF_Binnen" FromRole="T_Fragebogen_unter_Maschine" ToRole="T_SBF_Binnen" />
+        </EntityType>
+        <Association Name="F_Id_SBF_Binnen">
+          <End Role="T_SBF_Binnen" Type="Self.T_SBF_Binnen" Multiplicity="1" />
+          <End Role="T_Fragebogen_unter_Maschine" Type="Self.T_Fragebogen_unter_Maschine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_SBF_Binnen">
+              <PropertyRef Name="P_Id" />
+            </Principal>
+            <Dependent Role="T_Fragebogen_unter_Maschine">
+              <PropertyRef Name="F_Id_SBF_Binnen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Krebs_DB012Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_SBF_Binnen" EntityType="Self.T_SBF_Binnen" />
+          <EntitySet Name="T_Fragebogen_unter_Maschine" EntityType="Self.T_Fragebogen_unter_Maschine" />
+          <AssociationSet Name="F_Id_SBF_Binnen" Association="Self.F_Id_SBF_Binnen">
+            <End Role="T_SBF_Binnen" EntitySet="T_SBF_Binnen" />
+            <End Role="T_Fragebogen_unter_Maschine" EntitySet="T_Fragebogen_unter_Maschine" />
+          </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(Krebs_DB012Model.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(Krebs_DB012Model.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+        </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Krebs_DB012ModelStoreContainer" CdmEntityContainer="Krebs_DB012Entities">
+          <EntitySetMapping Name="T_SBF_Binnen">
+            <EntityTypeMapping TypeName="Krebs_DB012Model.T_SBF_Binnen">
+              <MappingFragment StoreEntitySet="T_SBF_Binnen">
+                <ScalarProperty Name="P_Id" ColumnName="P_Id" />
+                <ScalarProperty Name="Frage" ColumnName="Frage" />
+                <ScalarProperty Name="Antwort1" ColumnName="Antwort1" />
+                <ScalarProperty Name="Antwort2" ColumnName="Antwort2" />
+                <ScalarProperty Name="Antwort3" ColumnName="Antwort3" />
+                <ScalarProperty Name="Antwort4" ColumnName="Antwort4" />
+                <ScalarProperty Name="RichtigeAntwort" ColumnName="RichtigeAntwort" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Fragebogen_unter_Maschine">
+            <EntityTypeMapping TypeName="Krebs_DB012Model.T_Fragebogen_unter_Maschine">
+              <MappingFragment StoreEntitySet="T_Fragebogen_unter_Maschine">
+                <ScalarProperty Name="FragebogenNr" ColumnName="FragebogenNr" />
+                <ScalarProperty Name="F_Id_SBF_Binnen" ColumnName="F_Id_SBF_Binnen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Krebs_DB012Model.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Krebs_DB012Model.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Krebs_DB012Model.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Krebs_DB012Model.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Krebs_DB012Model.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Krebs_DB012Model.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Krebs_DB012Model.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Krebs_DB012Model.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Krebs_DB012Model.Store.sp_upgraddiagrams" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Kein" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
