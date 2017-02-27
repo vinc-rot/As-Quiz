@@ -1,0 +1,9 @@
+﻿<Window x:Class="WpfApplication1.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Konfiguration" Height="300" Width="400">
+    <Grid>
+        <Label Content="Konfiguration" HorizontalAlignment="Left" Margin="139,10,0,0" VerticalAlignment="Top" Background="#FFFBFBFB" FontSize="16"/>
+
+    </Grid>
+</Window>
