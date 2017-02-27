@@ -15,7 +15,7 @@
                 <GradientStop Color="#FFC54747" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button Content="Quit" Margin="8,285,11.934,0" VerticalAlignment="Top" Click="Button_Click" Grid.Column="2" Height="32" Foreground="#FF2A342A" BorderThickness="1" Cursor="Hand" FontSize="20">
+        <Button x:Name="btnQuit" Content="Quit" Margin="8,285,11.934,0" VerticalAlignment="Top" Click="Button_Click" Grid.Column="2" Height="32" Foreground="#FF2A342A" BorderThickness="1" Cursor="Hand" FontSize="20">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -27,7 +27,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label Content="Ein AS Quiz der Superlative" HorizontalAlignment="Left" Margin="35,10,0,0" VerticalAlignment="Top" Width="283" Foreground="#FFFBF7F7" Grid.Column="1" Height="36" FontSize="22" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblProjectName" Content="Ein AS Quiz der Superlative" HorizontalAlignment="Left" Margin="35,10,0,0" VerticalAlignment="Top" Width="283" Foreground="#FFFBF7F7" Grid.Column="1" Height="36" FontSize="22" Grid.ColumnSpan="2"/>
         <Calendar HorizontalAlignment="Left" Margin="28,111,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="168" Width="179" FontSize="18" RenderTransformOrigin="0.5,0.5" Grid.Row="8">
             <Calendar.Effect>
                 <DropShadowEffect ShadowDepth="8" Color="#FFA08E8E"/>
@@ -49,13 +49,13 @@
                 </LinearGradientBrush>
             </Calendar.Background>
         </Calendar>
-        <Button Content="Press to start" Grid.Column="2" Margin="8,122,7,0" VerticalAlignment="Top" Background="#FFA49928" FontSize="20" Height="38" Cursor="Hand" FontFamily="Tw Cen MT Condensed Extra Bold" Click="Button_Click_1">
+        <Button x:Name="btnStart" Content="Press to start" Grid.Column="2" Margin="8,122,7,0" VerticalAlignment="Top" Background="#FFA49928" FontSize="20" Height="38" Cursor="Hand" FontFamily="Tw Cen MT Condensed Extra Bold" Click="Button_Click_1">
             <Button.Effect>
                 <DropShadowEffect Color="#FF211313"/>
             </Button.Effect>
         </Button>
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="10,182,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="124" TextChanged="TextBox_TextChanged" FontSize="14"/>
-        <Label Content="Username:" Grid.Column="1" HorizontalAlignment="Left" Margin="159,176,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#FFF7EDED"/>
+        <TextBox x:Name="txtUsername" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="10,182,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="124" TextChanged="TextBox_TextChanged" FontSize="14"/>
+        <Label x:Name="lblUsername" Content="Username:" Grid.Column="1" HorizontalAlignment="Left" Margin="159,176,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#FFF7EDED"/>
 
     </Grid>
 </Window>
