@@ -27,35 +27,31 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label x:Name="lblProjectName" Content="Ein AS Quiz der Superlative" HorizontalAlignment="Left" Margin="35,10,0,0" VerticalAlignment="Top" Width="283" Foreground="#FFFBF7F7" Grid.Column="1" Height="36" FontSize="22" Grid.ColumnSpan="2"/>
-        <Calendar HorizontalAlignment="Left" Margin="28,111,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="168" Width="179" FontSize="18" RenderTransformOrigin="0.5,0.5" Grid.Row="8">
-            <Calendar.Effect>
-                <DropShadowEffect ShadowDepth="8" Color="#FFA08E8E"/>
-            </Calendar.Effect>
-            <Calendar.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-7"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Calendar.RenderTransform>
-            <Calendar.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="#FFE4EAF0"/>
-                    <GradientStop Color="#FFECF0F4" Offset="0.293"/>
-                    <GradientStop Color="#FFFCFCFD" Offset="0.52"/>
-                    <GradientStop Color="#FFF3A1A1" Offset="1"/>
-                </LinearGradientBrush>
-            </Calendar.Background>
-        </Calendar>
-        <Button x:Name="btnStart" Content="Press to start" Grid.Column="2" Margin="8,122,7,0" VerticalAlignment="Top" Background="#FFA49928" FontSize="20" Height="38" Cursor="Hand" FontFamily="Tw Cen MT Condensed Extra Bold" Click="Button_Click_1">
+        <Label x:Name="lblProjectName" Content="Sportbootführerschein Binnen &#xD;&#xA;(unter Antriebsmaschine)" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="308" Foreground="#FFFBF7F7" Grid.Column="1" Height="69" FontSize="22" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnStart" Content="Loslegen" Grid.Column="1" Margin="88,167,56,0" VerticalAlignment="Top" Background="#FFA49928" FontSize="20" Height="24" Cursor="Hand" FontFamily="Tw Cen MT Condensed Extra Bold" Click="Button_Click_1">
             <Button.Effect>
                 <DropShadowEffect Color="#FF211313"/>
             </Button.Effect>
         </Button>
-        <TextBox x:Name="txtUsername" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="10,182,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="124" TextChanged="TextBox_TextChanged" FontSize="14"/>
-        <Label x:Name="lblUsername" Content="Username:" Grid.Column="1" HorizontalAlignment="Left" Margin="159,176,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#FFF7EDED"/>
+        <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="0,101,0,0" VerticalAlignment="Top" Width="188" Height="23"/>
+        <ListBox Grid.Column="2" HorizontalAlignment="Left" Height="130" Margin="10,129,0,0" VerticalAlignment="Top" Width="115"/>
+        <Button Content="Konfiguration erstellen" Grid.Column="1" HorizontalAlignment="Left" Margin="20,234,0,0" VerticalAlignment="Top" Width="168" Height="37" Background="#FF73A0E0" FontSize="16"/>
+        <Label Content="    Historie" Grid.Column="2" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" Background="#FFB4AAAA" RenderTransformOrigin="0.5,0.5" Width="116" Height="33" FontSize="18" FontWeight="Bold">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.154"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Image Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
+        <Image HorizontalAlignment="Left" Height="37" Margin="59,234,0,0" VerticalAlignment="Top" Width="38" Source="images/gear-47203_960_720.png" RenderTransformOrigin="0.903,0.146" Grid.ColumnSpan="2">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="images/gear-47203_960_720.png"/>
+            </Image.OpacityMask>
+        </Image>
 
     </Grid>
 </Window>
