@@ -23,6 +23,15 @@ namespace WpfApplication1
         public MainWindow()
         {
             InitializeComponent();
+            Krebs_DB012Entities dbverbindung = new Krebs_DB012Entities();
+            IQueryable<string> fragenquery = dbverbindung.T_SBF_Binnen.Select(x => x.Frage);
+
+            foreach (var item in fragenquery)
+            {
+                DropFragelist.Items.Add(item);
+            }
+            //DropFragelist.ItemsSource = fragenquery.ToString();
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

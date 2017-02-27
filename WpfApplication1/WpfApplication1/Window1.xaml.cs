@@ -21,7 +21,14 @@ namespace WpfApplication1
     {
         public Window1()
         {
+            Random rnd = new Random(253);
+
             InitializeComponent();
+            Krebs_DB012Entities dbverbindung = new Krebs_DB012Entities();
+            fragenquery = dbverbindung.T_SBF_Binnen.Select(x => x.Frage);
+
+            lblFrage.Content = fragenquery.ElementAt(rnd.Next).ToString;
+
         }
     }
 }
