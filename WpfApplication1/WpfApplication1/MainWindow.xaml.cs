@@ -34,7 +34,11 @@ namespace WpfApplication1
         {
             Window1 Fenster = new Window1();
             Fenster.Show();
-            MessageBox.Show("You allways clicked hier");
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
    }
 }

@@ -54,6 +54,8 @@
                 <DropShadowEffect Color="#FF211313"/>
             </Button.Effect>
         </Button>
+        <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="10,182,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="124" TextChanged="TextBox_TextChanged" FontSize="14"/>
+        <Label Content="Username:" Grid.Column="1" HorizontalAlignment="Left" Margin="159,176,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#FFF7EDED"/>
 
     </Grid>
 </Window>
