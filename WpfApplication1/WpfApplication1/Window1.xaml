@@ -20,5 +20,8 @@
         <CheckBox x:Name="check2" Content="CheckBox" HorizontalAlignment="Left" Margin="210,151,0,0" VerticalAlignment="Top" FontSize="16" Height="21" Width="145"/>
         <Label Content="Prüfungsbogennummer" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top"/>
         <Label Content="6" HorizontalAlignment="Left" Margin="141,10,0,0" VerticalAlignment="Top"/>
+        <ProgressBar HorizontalAlignment="Left" Height="19" Margin="81,245,0,0" VerticalAlignment="Top" Width="212"/>
+        <Label Content="Ende" HorizontalAlignment="Left" Margin="310,238,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.028,0.538"/>
+        <Label Content="Anfang" HorizontalAlignment="Left" Margin="28,238,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
