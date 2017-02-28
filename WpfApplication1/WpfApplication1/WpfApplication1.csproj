@@ -177,13 +177,20 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\gear-47203_960_720.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="images\ws_Minimal_Gray_to_White_Gradient_1920x1200.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\1156313154.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\4137327-sea-sky-horizon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Developer ABC.png" />
+    <Resource Include="images\Segelschule OSZ IMT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\schraubschlüssel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
