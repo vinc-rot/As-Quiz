@@ -24,9 +24,6 @@ namespace WpfApplication1
         {
             InitializeComponent();
 
-            Konfiguration konfiguration = new Konfiguration();
-            lblProjectName.Content = konfiguration.txtProgrammName.Text;   
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
