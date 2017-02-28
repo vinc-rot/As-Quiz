@@ -3,6 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Konfiguration" Height="450.678" Width="378.281">
     <Grid Margin="0,0,-8,-4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="91*"/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FFB6ADAD" Offset="0"/>
@@ -10,11 +18,14 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="28*"/>
             <ColumnDefinition Width="84*"/>
-            <ColumnDefinition Width="41*"/>
-            <ColumnDefinition Width="64*"/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="54*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="159*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Konfiguration" HorizontalAlignment="Left" Margin="139,10,0,0" VerticalAlignment="Top" FontSize="20" Background="{x:Null}" FontWeight="Bold" Grid.ColumnSpan="3" Width="143">
+        <Label Content="Konfiguration" HorizontalAlignment="Left" Margin="1,10,0,0" VerticalAlignment="Top" FontSize="20" Background="{x:Null}" FontWeight="Bold" Width="143" Grid.Column="3" Height="37" Grid.ColumnSpan="3" Grid.RowSpan="3">
             <Label.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -22,14 +33,14 @@
                 </LinearGradientBrush>
             </Label.Foreground>
         </Label>
-        <Label Content="Name des Programms:" HorizontalAlignment="Left" Margin="27,83,0,0" VerticalAlignment="Top" FontSize="14" Grid.ColumnSpan="2"/>
-        <Label HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Label Content="Pürfung bestanden mit &#xD;&#xA;folgendem Prozentsatz:" HorizontalAlignment="Left" Margin="27,132,0,0" VerticalAlignment="Top" FontSize="14" Grid.ColumnSpan="2"/>
-        <Label x:Name="lblProzentPruef" Content="%" HorizontalAlignment="Left" Margin="54.187,148,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="1"/>
-        <TextBox x:Name="txtProgrammName" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="54.187,89,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <Label Content="Historie:" HorizontalAlignment="Left" Margin="116,204,0,0" VerticalAlignment="Top" FontSize="14" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnhistdelete" Grid.ColumnSpan="2" Content="Löschen" HorizontalAlignment="Left" Margin="54.187,210,0,0" VerticalAlignment="Top" Width="75" Background="#FFD4C4C4" Foreground="#FFB40F0F" FontSize="14" FontWeight="Bold" FontStyle="Italic" FontFamily="Segoe WP Black" Grid.Column="1"/>
-        <Button x:Name="btnbacktostart" Content="Speichern und zurück &#xD;&#xA;zum Programm" HorizontalAlignment="Left" Margin="28.187,334,0,0" VerticalAlignment="Top" Width="162" Grid.ColumnSpan="2" Height="60" Background="#FF1118AA" FontSize="16" Grid.Column="1" Click="btnbacktostart_Click">
+        <Label Content="Name des Programms:" HorizontalAlignment="Left" Margin="27,41,0,0" VerticalAlignment="Top" FontSize="14" Grid.ColumnSpan="4" Height="29" Width="150" Grid.Row="2"/>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Height="10" Width="10"/>
+        <Label Content="Pürfung bestanden mit &#xD;&#xA;folgendem Prozentsatz:" HorizontalAlignment="Left" Margin="27,18,0,0" VerticalAlignment="Top" FontSize="14" Grid.ColumnSpan="4" Height="47" Width="156" Grid.Row="3"/>
+        <Label x:Name="lblProzentPruef" Content="%" HorizontalAlignment="Left" Margin="3,34,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="5" Height="31" Width="23" Grid.Row="3"/>
+        <TextBox x:Name="txtProgrammName" HorizontalAlignment="Left" Height="23" Margin="3,47,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="120" Grid.Column="5" Grid.Row="2"/>
+        <Label Content="Historie:" HorizontalAlignment="Left" Margin="1,20,0,0" VerticalAlignment="Top" FontSize="14" Grid.Column="2" Grid.ColumnSpan="2" Height="29" Width="61" Grid.Row="4"/>
+        <Button x:Name="btnhistdelete" Content="Löschen" HorizontalAlignment="Left" Margin="3,26,0,0" VerticalAlignment="Top" Width="75" Background="#FFD4C4C4" Foreground="#FFB40F0F" FontSize="14" FontWeight="Bold" FontStyle="Italic" FontFamily="Segoe WP Black" Grid.Column="5" Height="23" Grid.Row="4"/>
+        <Button x:Name="btnbacktostart" Content="Speichern und zurück &#xD;&#xA;zum Programm" HorizontalAlignment="Left" Margin="4,91.982,0,0" VerticalAlignment="Top" Width="162" Height="60" Background="#FF1118AA" FontSize="16" Click="btnbacktostart_Click" Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="5">
             <Button.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
