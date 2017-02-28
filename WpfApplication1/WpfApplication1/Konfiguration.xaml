@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApplication1.Window2"
+﻿<Window x:Class="WpfApplication1.Konfiguration"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Konfiguration" Height="452" Width="410">
@@ -25,7 +25,7 @@
         <Label HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Label Content="Pürfung bestanden mit &#xD;&#xA;folgendem Prozentsatz:" HorizontalAlignment="Left" Margin="27,132,0,0" VerticalAlignment="Top" FontSize="14"/>
         <Label x:Name="lblProzentPruef" Content="%" HorizontalAlignment="Left" Margin="222,148,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <TextBox x:Name="txtName" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="222,89,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtProgrammName" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="222,89,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="120" TextChanged="txtProgrammName_TextChanged"/>
         <Label Content="Historie:" HorizontalAlignment="Left" Margin="116,204,0,0" VerticalAlignment="Top" FontSize="14"/>
         <Button Grid.ColumnSpan="2" Content="Löschen" HorizontalAlignment="Left" Margin="222,210,0,0" VerticalAlignment="Top" Width="75" Background="#FFD4C4C4" Foreground="#FFB40F0F" FontSize="14" FontWeight="Bold" FontStyle="Italic" FontFamily="Segoe WP Black"/>
 

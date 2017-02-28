@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApplication1.Window1"
+﻿<Window x:Class="WpfApplication1.Prüfung"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Fragebogen" Height="446.684" Width="554.237">

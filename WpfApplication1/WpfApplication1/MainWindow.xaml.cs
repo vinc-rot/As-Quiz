@@ -23,21 +23,37 @@ namespace WpfApplication1
         public MainWindow()
         {
             InitializeComponent();
+
+            Konfiguration konfiguration = new Konfiguration();
+            lblProjectName.Content = konfiguration.txtProgrammName.Text;   
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Window1 Fenster = new Window1();
+            Prüfung Fenster = new Prüfung();
             Fenster.Show();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+
+        }
+
+        private void txtUsername_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+        }
+
+        private void btnOptions_Click(object sender, RoutedEventArgs e)
+        {
+            Konfiguration konfiguration = new Konfiguration();
+            konfiguration.Show();
 
         }
    }
