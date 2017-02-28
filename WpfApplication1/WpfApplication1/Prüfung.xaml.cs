@@ -23,12 +23,9 @@ namespace WpfApplication1
         public Prüfung()
         {
 
-
             InitializeComponent();
 
-
-
-
+            
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)

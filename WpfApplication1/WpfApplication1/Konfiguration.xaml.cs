@@ -19,6 +19,7 @@ namespace WpfApplication1
     /// </summary>
     public partial class Konfiguration : Window
     {
+        
         public Konfiguration()
         {
             InitializeComponent();
@@ -28,7 +29,16 @@ namespace WpfApplication1
         private void btnbacktostart_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainwindow = new MainWindow();
-            mainwindow.
+            mainwindow.lblProjectName.Content = txtProgrammName.Text;
+            mainwindow.Show();
+
+            this.Close();
+        }
+
+        private void btnHistDelete_Click(object sender, RoutedEventArgs e)
+        {   
+            MainWindow mainwindow = new MainWindow();
+            mainwindow.listHistorie.Items.Clear();
         }
     }
 }

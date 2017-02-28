@@ -20,21 +20,32 @@ namespace WpfApplication1
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        
         public MainWindow()
         {
             InitializeComponent();
+
+
+            
 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            Application.Current.Shutdown();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void btnStart_Click_1(object sender, RoutedEventArgs e)
         {
-            Prüfung Fenster = new Prüfung();
-            Fenster.Show();
+
+            Prüfung prüfung = new Prüfung();
+            prüfung.Show();
+            
+            
+            prüfung.lblUsername.Content = txtUsername.Text;
+            this.Close();
+            
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -49,8 +60,16 @@ namespace WpfApplication1
 
         private void btnconfig_Click(object sender, RoutedEventArgs e)
         {
+            
             Konfiguration konfiguration = new Konfiguration();
             konfiguration.Show();
+            this.Close();
+
+        }
+
+        private void txtUsername_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
         }
    }
 }
