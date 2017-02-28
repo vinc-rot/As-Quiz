@@ -66,6 +66,9 @@
       <DependentUpon>Auswertung.xaml</DependentUpon>
     </Compile>
     <Compile Include="Fragenbogen.cs" />
+    <Compile Include="Konfiguration.xaml.cs">
+      <DependentUpon>Konfiguration.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -96,10 +99,11 @@
     <Compile Include="Prüfung.xaml.cs">
       <DependentUpon>Prüfung.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Konfiguration.xaml.cs">
-      <DependentUpon>Konfiguration.xaml</DependentUpon>
-    </Compile>
     <Page Include="Auswertung.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Konfiguration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -116,10 +120,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Prüfung.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Konfiguration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
