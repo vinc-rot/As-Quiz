@@ -17,11 +17,17 @@ namespace WpfApplication1
     /// <summary>
     /// Interaktionslogik für Window2.xaml
     /// </summary>
-    public partial class Window2 : Window
+    public partial class Konfiguration : Window
     {
-        public Window2()
+        public Konfiguration()
         {
             InitializeComponent();
+        }
+
+        private void txtProgrammName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string Programmname = txtProgrammName.Text;
+
         }
     }
 }
