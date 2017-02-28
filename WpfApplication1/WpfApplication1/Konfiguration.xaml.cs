@@ -28,7 +28,7 @@ namespace WpfApplication1
         private void btnbacktostart_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainwindow = new MainWindow();
-            mainwindow.
+            
         }
     }
 }
