@@ -35,7 +35,7 @@
         </Button>
         <ComboBox x:Name="DropFragelist" Grid.Column="1" HorizontalAlignment="Left" Margin="31,205,0,0" VerticalAlignment="Top" Width="188" Height="23"/>
         <ListBox x:Name="listHistorie" Grid.Column="2" HorizontalAlignment="Left" Height="164" Margin="10,129,0,0" VerticalAlignment="Top" Width="158"/>
-        <Button x:Name="btnOptions" Content="Konfiguration erstellen" Grid.Column="1" HorizontalAlignment="Left" Margin="43,424,0,0" VerticalAlignment="Top" Width="168" Height="37" Background="#FF73A0E0" FontSize="16" Click="btnOptions_Click"/>
+        <Button x:Name="btnconfig" Content="Konfiguration erstellen" Grid.Column="1" HorizontalAlignment="Left" Margin="43,424,0,0" VerticalAlignment="Top" Width="168" Height="37" Background="#FF73A0E0" FontSize="16"/>
         <Label Content="    Historie" Grid.Column="2" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" Background="#FFB4AAAA" RenderTransformOrigin="0.5,0.5" Width="157" Height="33" FontSize="18" FontWeight="Bold">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -53,7 +53,7 @@
             </Image.OpacityMask>
         </Image>
         <Label Content="Username:" HorizontalAlignment="Left" Margin="82,129,0,0" VerticalAlignment="Top" FontSize="16" Grid.ColumnSpan="2" Height="32" Width="83" Foreground="#FFF7F2F2"/>
-        <TextBox x:Name="txtUsername" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="84,133,0,0" TextWrapping="Wrap" Text="Enter" VerticalAlignment="Top" Width="135" FontSize="16" TextChanged="txtUsername_TextChanged"/>
+        <TextBox x:Name="txtUsername" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="84,133,0,0" TextWrapping="Wrap" Text="Enter" VerticalAlignment="Top" Width="135" FontSize="16"/>
 
     </Grid>
 </Window>

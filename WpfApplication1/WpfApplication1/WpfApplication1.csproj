@@ -62,6 +62,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Auswertung.xaml.cs">
+      <DependentUpon>Auswertung.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Fragenbogen.cs" />
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -96,6 +99,10 @@
     <Compile Include="Konfiguration.xaml.cs">
       <DependentUpon>Konfiguration.xaml</DependentUpon>
     </Compile>
+    <Page Include="Auswertung.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
