@@ -39,13 +39,23 @@ namespace WpfApplication1
         private void btnStart_Click_1(object sender, RoutedEventArgs e)
         {
 
-            Prüfung prüfung = new Prüfung();
-            prüfung.Show();
             
-            
-            prüfung.lblUsername.Content = txtUsername.Text;
-            this.Close();
-            
+            if (txtUsername.Text == "")
+            {
+                txtUsername.Background = Brushes.Red;
+
+                MessageBox.Show("Bitte geben Sie ihren Usernamen an um fortfahren zu können");
+            }
+            else
+            {
+
+                Prüfung prüfung = new Prüfung();
+                prüfung.Show();
+                prüfung.lblUsername.Content = txtUsername.Text;
+                this.Close();
+                 
+            }
+           
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -70,6 +80,11 @@ namespace WpfApplication1
         private void txtUsername_TextChanged_1(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void DropFragelist_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+          
         }
    }
 }

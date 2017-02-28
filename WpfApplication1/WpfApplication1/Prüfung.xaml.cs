@@ -32,19 +32,24 @@ namespace WpfApplication1
         {
             Random rnd = new Random();
             int fragezähler = 1;
-            int maxfragen = 20;
+            int maxfragen = 30;
 
-            Krebs_DB012Entities dbverbindung = new Krebs_DB012Entities();
-            IQueryable<string> fragenquery = dbverbindung.T_SBF_Binnen.Select(x => x.Frage);
+            Krebs_DB012Entities dbverbindung2 = new Krebs_DB012Entities();
+            IQueryable<string> fragenquery = dbverbindung2.T_SBF_Binnen.Select(x => x.Frage);
             List<string> Fragen = fragenquery.ToList();
 
-            if (fragezähler < maxfragen)
+           if (´fragezähler <= maxfragen )
             {
                 int index = rnd.Next(1, 253);
                 lblFrage.Content = Fragen[index];
+                   
                 fragezähler++;
-                lblFragenummer.Content = fragezähler;
-            }
+                lblFragenummer.Content = fragezähler++;
+            }           
+        }
+
+        private void ProgressBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
         }
     }
 }
