@@ -24,5 +24,11 @@ namespace WpfApplication1
             InitializeComponent();
           
         }
+
+        private void btnbacktostart_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainwindow = new MainWindow();
+            mainwindow.
+        }
     }
 }
