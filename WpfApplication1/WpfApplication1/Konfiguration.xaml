@@ -25,7 +25,7 @@
         <Label Content="Konfiguration" HorizontalAlignment="Left" Margin="1,10,0,0" VerticalAlignment="Top" FontSize="20" Background="{x:Null}" FontWeight="Bold" Width="143" Grid.Column="3" Height="37" Grid.ColumnSpan="3" Grid.RowSpan="3">
             <Label.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFF1E6E6" Offset="0"/>
                     <GradientStop Color="#FF9C1F1F" Offset="1"/>
                 </LinearGradientBrush>
             </Label.Foreground>
