@@ -50,11 +50,10 @@ namespace WpfApplication1
             
         }
 
-        private void btnOptions_Click(object sender, RoutedEventArgs e)
+        private void btnconfig_Click(object sender, RoutedEventArgs e)
         {
             Konfiguration konfiguration = new Konfiguration();
             konfiguration.Show();
-
         }
    }
 }

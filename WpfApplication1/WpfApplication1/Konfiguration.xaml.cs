@@ -15,19 +15,14 @@ using System.Windows.Shapes;
 namespace WpfApplication1
 {
     /// <summary>
-    /// Interaktionslogik für Window2.xaml
+    /// Interaktionslogik für Konfiguration.xaml
     /// </summary>
     public partial class Konfiguration : Window
     {
         public Konfiguration()
         {
             InitializeComponent();
-        }
-
-        private void txtProgrammName_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            string Programmname = txtProgrammName.Text;
-
+          
         }
     }
 }
