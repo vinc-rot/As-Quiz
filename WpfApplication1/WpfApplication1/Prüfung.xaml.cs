@@ -38,7 +38,7 @@ namespace WpfApplication1
             IQueryable<string> fragenquery = dbverbindung2.T_SBF_Binnen.Select(x => x.Frage);
             List<string> Fragen = fragenquery.ToList();
 
-           if (´fragezähler <= maxfragen )
+           if (fragezähler <= maxfragen )
             {
                 int index = rnd.Next(1, 253);
                 lblFrage.Content = Fragen[index];
