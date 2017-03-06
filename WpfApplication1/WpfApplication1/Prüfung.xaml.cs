@@ -34,7 +34,7 @@ namespace WpfApplication1
             int fragezähler = 1;
             int maxfragen = 30;
 
-            Krebs_DB012Entities dbverbindung2 = new Krebs_DB012Entities();
+            oszimtEntities dbverbindung2 = new oszimtEntities();
             IQueryable<string> fragenquery = dbverbindung2.T_SBF_Binnen.Select(x => x.Frage);
             List<string> Fragen = fragenquery.ToList();
 
