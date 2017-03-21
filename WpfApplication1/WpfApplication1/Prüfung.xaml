@@ -10,12 +10,12 @@
         <Grid.Background>
             <ImageBrush ImageSource="images/1156313154.jpg"/>
         </Grid.Background>
-        <Image HorizontalAlignment="Left" Height="329" Margin="10,85,-114,0" VerticalAlignment="Top" Width="650" Source="images/ws_Minimal_Gray_to_White_Gradient_1920x1200.jpg" RenderTransformOrigin="0.634,0.483" Opacity="0.68" Grid.ColumnSpan="2">
+        <Image HorizontalAlignment="Left" Height="317" Margin="10,85,0,0" VerticalAlignment="Top" Width="529" Source="images/ws_Minimal_Gray_to_White_Gradient_1920x1200.jpg" RenderTransformOrigin="0.634,0.483" Opacity="0.68" Grid.ColumnSpan="2">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="images/ws_Minimal_Gray_to_White_Gradient_1920x1200.jpg" Stretch="None"/>
             </Image.OpacityMask>
         </Image>
-        <Label x:Name="lblFrage" Content="Welche Frage steht hier?" HorizontalAlignment="Left" Margin="11,86,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblFrage" Content="Welche Frage steht hier?" HorizontalAlignment="Left" Margin="11,86,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="2" Width="503" Height="74"/>
         <Label x:Name="lblFragestat" Content="Frage" HorizontalAlignment="Left" Margin="1.763,59,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <Label x:Name="lblFragenummer" Content="1" HorizontalAlignment="Left" Margin="70.763,59,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <Label x:Name="lblTrenn" Content="/" HorizontalAlignment="Left" Margin="91.763,59,0,0" VerticalAlignment="Top" Grid.Column="1"/>

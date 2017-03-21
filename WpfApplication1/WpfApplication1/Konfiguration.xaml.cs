@@ -40,5 +40,11 @@ namespace WpfApplication1
             MainWindow mainwindow = new MainWindow();
             mainwindow.listHistorie.Items.Clear();
         }
+
+        // - KonfigurationSheet
+        public void UeberschriftColorChange()
+        {
+
+        }
     }
 }
