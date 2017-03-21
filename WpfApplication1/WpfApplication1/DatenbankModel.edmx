@@ -91,7 +91,7 @@ Warnung 6002: Für Tabelle/Sicht 'C:\USERS\USER\SOURCE\REPOS\AS-QUIZ\WPFAPPLICAT
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Datenbank_BinnenEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Datenbank_BinnenEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="T_SBF_Binnen" EntityType="Self.T_SBF_Binnen" />
           <EntitySet Name="T_Fragebogen_unter_Maschine" EntityType="Self.T_Fragebogen_unter_Maschine" />
           <AssociationSet Name="F_Id_SBF_Binnen" Association="Self.F_Id_SBF_Binnen">
@@ -104,7 +104,7 @@ Warnung 6002: Für Tabelle/Sicht 'C:\USERS\USER\SOURCE\REPOS\AS-QUIZ\WPFAPPLICAT
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Datenbank_BinnenModelStoreContainer" CdmEntityContainer="Datenbank_BinnenEntities2">
+        <EntityContainerMapping StorageEntityContainer="Datenbank_BinnenModelStoreContainer" CdmEntityContainer="Datenbank_BinnenEntities3">
           <EntitySetMapping Name="T_SBF_Binnen">
             <EntityTypeMapping TypeName="Datenbank_BinnenModel.T_SBF_Binnen">
               <MappingFragment StoreEntitySet="T_SBF_Binnen">

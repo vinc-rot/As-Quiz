@@ -13,6 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -80,20 +80,20 @@
     <Compile Include="Auswertung.xaml.cs">
       <DependentUpon>Auswertung.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Datenbank_Binnen_model.Context.cs">
+    <Compile Include="DatenbankModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Datenbank_Binnen_model.Context.tt</DependentUpon>
+      <DependentUpon>DatenbankModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Datenbank_Binnen_model.cs">
+    <Compile Include="DatenbankModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Datenbank_Binnen_model.tt</DependentUpon>
+      <DependentUpon>DatenbankModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Datenbank_Binnen_model.Designer.cs">
+    <Compile Include="DatenbankModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Datenbank_Binnen_model.edmx</DependentUpon>
+      <DependentUpon>DatenbankModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Fragenbogen.cs" />
     <Compile Include="Konfiguration.xaml.cs">
@@ -103,10 +103,10 @@
       <DependentUpon>Prüfung.xaml</DependentUpon>
     </Compile>
     <Compile Include="T_Fragebogen_unter_Maschine.cs">
-      <DependentUpon>Datenbank_Binnen_model.tt</DependentUpon>
+      <DependentUpon>DatenbankModel.tt</DependentUpon>
     </Compile>
     <Compile Include="T_SBF_Binnen.cs">
-      <DependentUpon>Datenbank_Binnen_model.tt</DependentUpon>
+      <DependentUpon>DatenbankModel.tt</DependentUpon>
     </Compile>
     <Page Include="Auswertung.xaml">
       <SubType>Designer</SubType>
@@ -155,22 +155,22 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Datenbank_Binnen_model.edmx">
+    <EntityDeploy Include="DatenbankModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Datenbank_Binnen_model.Designer.cs</LastGenOutput>
+      <LastGenOutput>DatenbankModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Datenbank_Binnen_model.Context.tt">
+    <None Include="DatenbankModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Datenbank_Binnen_model.edmx</DependentUpon>
-      <LastGenOutput>Datenbank_Binnen_model.Context.cs</LastGenOutput>
+      <DependentUpon>DatenbankModel.edmx</DependentUpon>
+      <LastGenOutput>DatenbankModel.Context.cs</LastGenOutput>
     </None>
-    <None Include="Datenbank_Binnen_model.edmx.diagram">
-      <DependentUpon>Datenbank_Binnen_model.edmx</DependentUpon>
+    <None Include="DatenbankModel.edmx.diagram">
+      <DependentUpon>DatenbankModel.edmx</DependentUpon>
     </None>
-    <None Include="Datenbank_Binnen_model.tt">
+    <None Include="DatenbankModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Datenbank_Binnen_model.edmx</DependentUpon>
-      <LastGenOutput>Datenbank_Binnen_model.cs</LastGenOutput>
+      <DependentUpon>DatenbankModel.edmx</DependentUpon>
+      <LastGenOutput>DatenbankModel.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -202,7 +202,8 @@
     <Resource Include="images\schraubschlüssel.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\zahnräder.jpg" />
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
@@ -216,6 +217,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Datenbank_Binnen.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Datenbank_Binnen_log.ldf">
+      <DependentUpon>Datenbank_Binnen.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

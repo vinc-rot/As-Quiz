@@ -13,10 +13,10 @@ namespace WpfApplication1
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Datenbank_BinnenEntities2 : DbContext
+    public partial class Datenbank_BinnenEntities3 : DbContext
     {
-        public Datenbank_BinnenEntities2()
-            : base("name=Datenbank_BinnenEntities2")
+        public Datenbank_BinnenEntities3()
+            : base("name=Datenbank_BinnenEntities3")
         {
         }
     

@@ -40,21 +40,7 @@ namespace WpfApplication1
         {
 
             
-            if (txtUsername.Text == "")
-            {
-                txtUsername.Background = Brushes.Red;
 
-                MessageBox.Show("Bitte geben Sie ihren Usernamen an um fortfahren zu können");
-            }
-            else
-            {
-
-                Prüfung prüfung = new Prüfung();
-                prüfung.Show();
-                prüfung.lblUsername.Content = txtUsername.Text;
-                this.Close();
-                 
-            }
            
         }
 
@@ -85,6 +71,25 @@ namespace WpfApplication1
         private void DropFragelist_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
           
+        }
+
+        private void btnStart_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtUsername.Text == "")
+            {
+                txtUsername.Background = Brushes.Red;
+
+                MessageBox.Show("Bitte geben Sie ihren Usernamen an um fortfahren zu können");
+            }
+            else
+            {
+
+                Prüfung prüfung = new Prüfung();
+                prüfung.Show();
+                prüfung.lblUsername.Content = txtUsername.Text;
+                this.Close();
+
+            }
         }
    }
 }

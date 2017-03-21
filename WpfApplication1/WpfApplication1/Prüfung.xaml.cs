@@ -32,18 +32,19 @@ namespace WpfApplication1
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
+            Img_Box.Source = null;
             Random rnd = new Random();
             int fragezähler = 1;
             int maxfragen = 30;
 
-            Datenbank_BinnenEntities2 dbverbindung2 = new Datenbank_BinnenEntities2();
+            Datenbank_BinnenEntities3 dbverbindung2 = new Datenbank_BinnenEntities3();
             IQueryable<string> fragenquery = dbverbindung2.T_SBF_Binnen.Select(x => x.Frage);
             List<string> Fragen = fragenquery.ToList();
 
            if (fragezähler <= maxfragen )
             {
                 int index = rnd.Next(1, 253);
-                lblFrage.Content = Fragen[index];
+                lblFrage.Text = Fragen[index];
                 if (Fragen[index].Contains("{") == true)
                 ShowBild(Fragen[index]);                                           
                 fragezähler++;
@@ -56,11 +57,25 @@ namespace WpfApplication1
         private void ShowBild(string frage)
         {
             string[] tokens = frage.Split('{','}');
-                MessageBox.Show(tokens[1]);
+            BitmapImage bild = new BitmapImage();
+            bild.BeginInit();
+            bild.UriSource = new Uri(@"C:\Users\user\Pictures\" + tokens[1]);
+            bild.EndInit();
+            Img_Box.Source = bild;
 
         }
 
         private void ProgressBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
+        private void btnSubmit_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnSubmit_Clic(object sender, RoutedEventArgs e)
         {
 
         }
