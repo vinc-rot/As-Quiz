@@ -45,7 +45,7 @@
                 </LinearGradientBrush>
             </Button.Foreground>
         </Button>
-        <TextBox x:Name="txtProzent" Grid.Column="5" HorizontalAlignment="Left" Height="23" Margin="3,42,0,0" Grid.Row="3" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="63" FontSize="14"/>
+        <TextBox x:Name="txtProzent" Grid.Column="5" HorizontalAlignment="Left" Height="23" Margin="3,42,0,0" Grid.Row="3" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="63" FontSize="14"/>
 
     </Grid>
 </Window>

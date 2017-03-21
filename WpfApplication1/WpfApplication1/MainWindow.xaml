@@ -53,7 +53,7 @@
             </Image.OpacityMask>
         </Image>
         <Label Content="Username:" HorizontalAlignment="Left" Margin="39,129,0,0" VerticalAlignment="Top" FontSize="16" Height="32" Width="83" Foreground="#FFF7F2F2"/>
-        <TextBox x:Name="txtUsername" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="31,133,0,0" TextWrapping="Wrap" Text="Enter" VerticalAlignment="Top" Width="188" FontSize="16" SelectionBrush="#FF64ACF3"/>
+        <TextBox x:Name="txtUsername" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="31,133,0,0" TextWrapping="Wrap" Text="Enter your Name" VerticalAlignment="Top" Width="188" FontSize="16" SelectionBrush="#FF64ACF3"/>
         <Label Content="Auftraggeber: &#xD;&#xA;Segelschule OSZ IMT GmbH&#xD;&#xA;Marine Weg 6b &#xD;&#xA;54321 Berlin " Grid.Column="2" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top" Height="96" Width="174" Foreground="#FF363030" FontSize="13"/>
         <Image Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Left" Height="100" Margin="133,0,0,0" VerticalAlignment="Top" Width="90" Source="images/Segelschule OSZ IMT.png"/>
 

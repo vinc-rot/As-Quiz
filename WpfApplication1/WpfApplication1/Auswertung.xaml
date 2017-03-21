@@ -41,7 +41,9 @@
                 </LinearGradientBrush>
             </Label.Foreground>
         </Label>
-        <Label Content="Herzlichen Glückwunsch" HorizontalAlignment="Left" Margin="111,213,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_bestanden" Content="Herzlichen Glückwunsch" HorizontalAlignment="Left" Margin="34,228,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Foreground="#FF589330"/>
+        <Label x:Name="lbl_maxFragen" Content="/ 30" HorizontalAlignment="Left" Margin="87,171,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="lbl_richtigeFragen" Content="0" HorizontalAlignment="Left" Margin="55,171,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Width="27" RenderTransformOrigin="1.738,0.465"/>
 
     </Grid>
 </Window>

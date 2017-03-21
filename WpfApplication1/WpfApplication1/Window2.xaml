@@ -25,8 +25,8 @@
         <Label Content="Name des Programms:" HorizontalAlignment="Left" Margin="27,83,0,0" VerticalAlignment="Top" FontSize="14" Grid.ColumnSpan="2"/>
         <Label HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Label Content="Pürfung bestanden mit &#xD;&#xA;folgendem Prozentsatz:" HorizontalAlignment="Left" Margin="27,132,0,0" VerticalAlignment="Top" FontSize="14" Grid.ColumnSpan="2"/>
-        <Label x:Name="lblProzentPruef" Content="%" HorizontalAlignment="Left" Margin="54.187,148,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="1"/>
-        <TextBox x:Name="txtName" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="54.187,89,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Label x:Name="lblProzentPruef" Content="0" HorizontalAlignment="Left" Margin="54.187,148,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="1"/>
+        <TextBox x:Name="txtName" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="54.187,89,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="120" Grid.Column="1" FontSize="13"/>
         <Label Content="Historie:" HorizontalAlignment="Left" Margin="116,204,0,0" VerticalAlignment="Top" FontSize="14" Grid.ColumnSpan="2"/>
         <Button x:Name="btnhistdelete" Grid.ColumnSpan="2" Content="Löschen" HorizontalAlignment="Left" Margin="54.187,210,0,0" VerticalAlignment="Top" Width="75" Background="#FFD4C4C4" Foreground="#FFB40F0F" FontSize="14" FontWeight="Bold" FontStyle="Italic" FontFamily="Segoe WP Black" Grid.Column="1"/>
         <Button x:Name="btnbacktostart" Content="Speichern und zurück &#xD;&#xA;zum Programm" HorizontalAlignment="Left" Margin="28.187,334,0,0" VerticalAlignment="Top" Width="162" Grid.ColumnSpan="2" Height="60" Background="#FF1118AA" FontSize="16" Grid.Column="1">
@@ -37,6 +37,7 @@
                 </LinearGradientBrush>
             </Button.Foreground>
         </Button>
+        <Label x:Name="lbl_mitProzent" Content="%" HorizontalAlignment="Left" Margin="9,148,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="2"/>
 
     </Grid>
 </Window>

@@ -17,7 +17,6 @@
                 <ImageBrush ImageSource="images/ws_Minimal_Gray_to_White_Gradient_1920x1200.jpg" Stretch="None"/>
             </Image.OpacityMask>
         </Image>
-        <Label x:Name="lblFrage" Content="Welche Frage steht hier?" HorizontalAlignment="Left" Margin="23,84,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="31" Width="194"/>
         <Label x:Name="lblFragestat" Content="Frage" HorizontalAlignment="Left" Margin="167,55,0,0" VerticalAlignment="Top" Height="26" Width="39"/>
         <Label x:Name="lblFragenummer" Content="1" HorizontalAlignment="Left" Margin="225,55,0,0" VerticalAlignment="Top" Height="26" Width="16"/>
         <Label x:Name="lblTrenn" Content="/" HorizontalAlignment="Left" Margin="242,55,0,0" VerticalAlignment="Top" Height="26" Width="15"/>
@@ -56,9 +55,9 @@
         </CheckBox>
         <Label Content="Prüfungsbogennummer" HorizontalAlignment="Left" Margin="23,6,0,386" Width="136"/>
         <Label x:Name="lblPruefnr" Content="6" HorizontalAlignment="Left" Margin="168,6,0,0" VerticalAlignment="Top" Height="26" Width="16"/>
-        <ProgressBar x:Name="ProgressBar" HorizontalAlignment="Left" Height="19" Margin="185,324,0,0" VerticalAlignment="Top" Width="212"/>
-        <Label Content="Ende" HorizontalAlignment="Left" Margin="407,317,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.028,0.538" Height="26" Width="36"/>
-        <Label Content="Anfang" HorizontalAlignment="Left" Margin="117,317,0,0" VerticalAlignment="Top" Height="26" Width="48"/>
+        <ProgressBar x:Name="ProgressBar" HorizontalAlignment="Left" Height="19" Margin="175,324,0,0" VerticalAlignment="Top" Width="212"/>
+        <Label Content="Ende" HorizontalAlignment="Left" Margin="407,317,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.028,0.538" Height="26" Width="43" FontFamily="Showcard Gothic"/>
+        <Label Content="Anfang" HorizontalAlignment="Left" Margin="96,317,0,0" VerticalAlignment="Top" Height="26" Width="63" FontFamily="Showcard Gothic"/>
         <Button x:Name="btnSubmit" Content="Weiter ►" HorizontalAlignment="Left" Margin="407,283,0,0" VerticalAlignment="Top" Width="82" FontSize="16" FontWeight="Bold" Height="25">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -69,7 +68,7 @@
         </Button>
         <Label Content="Username:" HorizontalAlignment="Left" Margin="332,6,0,0" VerticalAlignment="Top" Height="26" Width="66"/>
         <Label x:Name="lblUsername" Content="" HorizontalAlignment="Left" Margin="398,6,0,0" VerticalAlignment="Top" Width="105" Height="26"/>
-        <Button x:Name="btn_zurueck" Content="◄ Zurück" HorizontalAlignment="Left" Margin="70,283,0,0" VerticalAlignment="Top" Width="88" Height="25" FontSize="14" FontWeight="Bold">
+        <Button x:Name="btn_zurueck" Content="◄ Zurück" HorizontalAlignment="Left" Margin="71,283,0,0" VerticalAlignment="Top" Width="88" Height="25" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.693,0.78">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF829DD6" Offset="0.94"/>
@@ -77,6 +76,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Image HorizontalAlignment="Left" Height="90" Margin="23,157,0,0" VerticalAlignment="Top" Width="82" Source="images/Segelschule OSZ IMT.png"/>
+        <Image x:Name="Img_Box" HorizontalAlignment="Left" Height="90" Margin="23,157,0,0" VerticalAlignment="Top" Width="82" Source="images/Segelschule OSZ IMT.png"/>
+        <TextBox x:Name="lblFrage" HorizontalAlignment="Left" Height="48" Margin="45,86,0,0" TextWrapping="Wrap" Text="Wie war die Frage?" VerticalAlignment="Top" Width="342" FontSize="16" SpellCheck.IsEnabled="True" Background="{x:Null}" FontFamily="Segoe WP Black"/>
     </Grid>
 </Window>
