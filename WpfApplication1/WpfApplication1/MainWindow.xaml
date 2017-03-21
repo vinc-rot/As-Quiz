@@ -4,16 +4,13 @@
         Title="As Quiz" Height="546.14" Width="725.559" Background="#FF1139EE" BorderBrush="#FFD41C1C" Foreground="#FFEE1C1C">
     <Grid Cursor="Arrow">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="82*"/>
-            <ColumnDefinition Width="244*"/>
-            <ColumnDefinition Width="144*"/>
-            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="127*"/>
+            <ColumnDefinition Width="358*"/>
+            <ColumnDefinition Width="214*"/>
+            <ColumnDefinition Width="19*"/>
         </Grid.ColumnDefinitions>
         <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black" Offset="0"/>
-                <GradientStop Color="#FFC54747" Offset="1"/>
-            </LinearGradientBrush>
+            <ImageBrush ImageSource="images/4137327-sea-sky-horizon.jpg"/>
         </Grid.Background>
         <Button x:Name="btnQuit" Content="Quit" Margin="10,429,10,0" VerticalAlignment="Top" Click="Button_Click" Grid.Column="2" Height="32" Foreground="#FF2A342A" BorderThickness="1" Cursor="Hand" FontSize="20">
             <Button.Effect>
@@ -27,15 +24,19 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label x:Name="lblProjectName" Content="Sportbootführerschein Binnen &#xD;&#xA;(unter Antriebsmaschine)" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="308" Foreground="#FFFBF7F7" Grid.Column="1" Height="69" FontSize="22" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnStart" Content="Loslegen" Grid.Column="1" Margin="43,258,144,0" VerticalAlignment="Top" Background="#FFA49928" FontSize="20" Height="24" Cursor="Hand" FontFamily="Tw Cen MT Condensed Extra Bold" Click="btnStart_Click_1">
+        <Label x:Name="lblProjectName" Content="Sportbootführerschein Binnen &#xD;&#xA;(unter Antriebsmaschine)" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="308" Foreground="#FFFBF7F7" Grid.Column="1" Height="69" FontSize="22"/>
+        <Button x:Name="btnStart" Content="Loslegen" Grid.Column="1" Margin="31,258,144,0" VerticalAlignment="Top" Background="#FFA49928" FontSize="20" Height="24" Cursor="Hand" FontFamily="Tw Cen MT Condensed Extra Bold" Click="Button_Click_1">
             <Button.Effect>
                 <DropShadowEffect Color="#FF211313"/>
             </Button.Effect>
         </Button>
         <ComboBox x:Name="DropFragelist" Grid.Column="1" HorizontalAlignment="Left" Margin="31,205,0,0" VerticalAlignment="Top" Width="188" Height="23" SelectionChanged="DropFragelist_SelectionChanged"/>
         <ListBox x:Name="listHistorie" Grid.Column="2" HorizontalAlignment="Left" Height="164" Margin="10,129,0,0" VerticalAlignment="Top" Width="158"/>
-        <Button x:Name="btnconfig" Content="Konfiguration erstellen" Grid.Column="1" HorizontalAlignment="Left" Margin="43,424,0,0" VerticalAlignment="Top" Width="168" Height="37" Background="#FF73A0E0" FontSize="16" Click="btnconfig_Click"/>
+        <Button x:Name="btnconfig" Content="Konfiguration erstellen" Grid.Column="1" HorizontalAlignment="Left" Margin="33,424,0,0" VerticalAlignment="Top" Width="188" Height="37" Background="#FF73A0E0" FontSize="16" Click="btnconfig_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
         <Label Content="    Historie" Grid.Column="2" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" Background="#FFB4AAAA" RenderTransformOrigin="0.5,0.5" Width="157" Height="33" FontSize="18" FontWeight="Bold">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -46,14 +47,15 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Image Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
-        <Image HorizontalAlignment="Left" Height="37" Margin="98,424,0,0" VerticalAlignment="Top" Width="38" Source="images/gear-47203_960_720.png" RenderTransformOrigin="0.903,0.146" Grid.ColumnSpan="2">
+        <Image HorizontalAlignment="Left" Height="37" Margin="122,424,0,0" VerticalAlignment="Top" Width="38" Source="images/schraubschlüssel.png" RenderTransformOrigin="0.903,0.146" Stretch="Fill" Grid.ColumnSpan="2">
             <Image.OpacityMask>
-                <ImageBrush ImageSource="images/gear-47203_960_720.png"/>
+                <ImageBrush ImageSource="images/schraubschlüssel.png"/>
             </Image.OpacityMask>
         </Image>
-        <Label Content="Username:" HorizontalAlignment="Left" Margin="82,129,0,0" VerticalAlignment="Top" FontSize="16" Grid.ColumnSpan="2" Height="32" Width="83" Foreground="#FFF7F2F2"/>
-        <TextBox x:Name="txtUsername" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="84,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" FontSize="16" TextChanged="txtUsername_TextChanged_1"/>
+        <Label Content="Username:" HorizontalAlignment="Left" Margin="39,129,0,0" VerticalAlignment="Top" FontSize="16" Height="32" Width="83" Foreground="#FFF7F2F2"/>
+        <TextBox x:Name="txtUsername" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="31,133,0,0" TextWrapping="Wrap" Text="Enter" VerticalAlignment="Top" Width="188" FontSize="16" SelectionBrush="#FF64ACF3"/>
+        <Label Content="Auftraggeber: &#xD;&#xA;Segelschule OSZ IMT GmbH&#xD;&#xA;Marine Weg 6b &#xD;&#xA;54321 Berlin " Grid.Column="2" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top" Height="96" Width="174" Foreground="#FF363030" FontSize="13"/>
+        <Image Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Left" Height="100" Margin="133,0,0,0" VerticalAlignment="Top" Width="90" Source="images/Segelschule OSZ IMT.png"/>
 
     </Grid>
 </Window>
