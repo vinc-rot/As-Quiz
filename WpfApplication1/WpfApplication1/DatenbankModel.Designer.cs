@@ -1,4 +1,4 @@
-﻿// Die T4-Codegenerierung ist für Modell 'C:\Users\user\Source\Repos\As-Quiz\WpfApplication1\WpfApplication1\DatenbankModel.edmx' aktiviert. 
+﻿// Die T4-Codegenerierung ist für Modell 'C:\Users\Justin\Source\Repos\As-Quiz2\WpfApplication1\WpfApplication1\Datenbankmodel.edmx' aktiviert. 
 // Um die Generierung von Legacycode zu aktivieren, ändern Sie den Wert der Designer-Eigenschaft 'Code Generation Strategy'
 // in 'Legacy ObjectContext'. Diese Eigenschaft wird im Eigenschaftenfenster angezeigt, wenn das Modell
 // im Designer geöffnet ist.

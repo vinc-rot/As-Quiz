@@ -37,7 +37,7 @@ namespace WpfApplication1
             int fragezähler = 1;
             int maxfragen = 30;
 
-            Datenbank_BinnenEntities3 dbverbindung2 = new Datenbank_BinnenEntities3();
+            DatenbankEntitie dbverbindung2 = new DatenbankEntitie();
             IQueryable<string> fragenquery = dbverbindung2.T_SBF_Binnen.Select(x => x.Frage);
             List<string> Fragen = fragenquery.ToList();
 
@@ -56,12 +56,19 @@ namespace WpfApplication1
         //Frage Parsen "REGEX"
         private void ShowBild(string frage)
         {
-            string[] tokens = frage.Split('{','}');
-            BitmapImage bild = new BitmapImage();
-            bild.BeginInit();
-            bild.UriSource = new Uri(@"C:\Users\user\Pictures\" + tokens[1]);
-            bild.EndInit();
-            Img_Box.Source = bild;
+            try
+            {
+                string[] tokens = frage.Split('{', '}');
+                BitmapImage bild = new BitmapImage();
+                bild.BeginInit();
+                bild.UriSource = new Uri(@"C:\Users\user\Pictures\" + tokens[1]);
+                bild.EndInit();
+                Img_Box.Source = bild;
+            }
+            catch
+            {
+                MessageBox.Show("HOMO");
+            };
 
         }
 

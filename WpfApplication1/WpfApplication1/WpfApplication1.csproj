@@ -80,20 +80,20 @@
     <Compile Include="Auswertung.xaml.cs">
       <DependentUpon>Auswertung.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DatenbankModel.Context.cs">
+    <Compile Include="Datenbankmodel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DatenbankModel.Context.tt</DependentUpon>
+      <DependentUpon>Datenbankmodel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DatenbankModel.cs">
+    <Compile Include="Datenbankmodel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DatenbankModel.tt</DependentUpon>
+      <DependentUpon>Datenbankmodel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DatenbankModel.Designer.cs">
+    <Compile Include="Datenbankmodel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DatenbankModel.edmx</DependentUpon>
+      <DependentUpon>Datenbankmodel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Fragenbogen.cs" />
     <Compile Include="Konfiguration.xaml.cs">
@@ -103,10 +103,10 @@
       <DependentUpon>Prüfung.xaml</DependentUpon>
     </Compile>
     <Compile Include="T_Fragebogen_unter_Maschine.cs">
-      <DependentUpon>DatenbankModel.tt</DependentUpon>
+      <DependentUpon>Datenbankmodel.tt</DependentUpon>
     </Compile>
     <Compile Include="T_SBF_Binnen.cs">
-      <DependentUpon>DatenbankModel.tt</DependentUpon>
+      <DependentUpon>Datenbankmodel.tt</DependentUpon>
     </Compile>
     <Page Include="Auswertung.xaml">
       <SubType>Designer</SubType>
@@ -155,22 +155,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="DatenbankModel.edmx">
+    <EntityDeploy Include="Datenbankmodel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DatenbankModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>Datenbankmodel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DatenbankModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DatenbankModel.edmx</DependentUpon>
-      <LastGenOutput>DatenbankModel.Context.cs</LastGenOutput>
-    </None>
-    <None Include="DatenbankModel.edmx.diagram">
-      <DependentUpon>DatenbankModel.edmx</DependentUpon>
-    </None>
-    <None Include="DatenbankModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DatenbankModel.edmx</DependentUpon>
-      <LastGenOutput>DatenbankModel.cs</LastGenOutput>
+    <None Include="Datenbankmodel.edmx.diagram">
+      <DependentUpon>Datenbankmodel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -219,6 +209,16 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Datenbankmodel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Datenbankmodel.edmx</DependentUpon>
+      <LastGenOutput>Datenbankmodel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datenbankmodel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Datenbankmodel.edmx</DependentUpon>
+      <LastGenOutput>Datenbankmodel.cs</LastGenOutput>
+    </Content>
     <Content Include="Datenbank_Binnen.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -4,10 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c0dd6ced248248258075e141a202c1c8" Name="Diagram1">
-        <EntityTypeShape EntityType="Datenbank_BinnenModel.T_SBF_Binnen" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="Datenbank_BinnenModel.T_Fragebogen_unter_Maschine" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
-        <AssociationConnector Association="Datenbank_BinnenModel.F_Id_SBF_Binnen" ManuallyRouted="false" />
+      <Diagram DiagramId="d79d9ef6f38448159253c410582b5ff5" Name="Diagram1">
+        <EntityTypeShape EntityType="DatenbankModel.T_SBF_Binnen" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatenbankModel.T_Fragebogen_unter_Maschine" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="DatenbankModel.F_Id_SBF_Binnen" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
