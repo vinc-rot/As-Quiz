@@ -27,7 +27,9 @@ namespace WpfApplication1
 
             InitializeComponent();
 
-            
+         
+
+
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
@@ -67,7 +69,7 @@ namespace WpfApplication1
             }
             catch
             {
-                MessageBox.Show("HOMO");
+                MessageBox.Show("Bild nicht gefunden");
             };
 
         }

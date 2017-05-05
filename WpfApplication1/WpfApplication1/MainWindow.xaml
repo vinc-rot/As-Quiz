@@ -30,8 +30,8 @@
                 <DropShadowEffect Color="#FF211313"/>
             </Button.Effect>
         </Button>
-        <ComboBox x:Name="DropFragelist" Grid.Column="1" HorizontalAlignment="Left" Margin="31,205,0,0" VerticalAlignment="Top" Width="188" Height="23" SelectionChanged="DropFragelist_SelectionChanged"/>
-        <ListBox x:Name="listHistorie" Grid.Column="2" HorizontalAlignment="Left" Height="164" Margin="10,129,0,0" VerticalAlignment="Top" Width="158"/>
+        <ComboBox x:Name="DropFragelist" Grid.Column="1" HorizontalAlignment="Left" Margin="31,205,0,0" VerticalAlignment="Top" Width="188" Height="23" SelectionChanged="DropFragelist_SelectionChanged" Text="Fragebogen auswählen"/>
+        <ListBox x:Name="listHistorie" Grid.Column="2" HorizontalAlignment="Left" Height="164" Margin="10,129,0,0" VerticalAlignment="Top" Width="158" SelectionChanged="listHistorie_SelectionChanged"/>
         <Button x:Name="btnconfig" Content="Konfiguration erstellen" Grid.Column="1" HorizontalAlignment="Left" Margin="33,424,0,0" VerticalAlignment="Top" Width="188" Height="37" Background="#FF73A0E0" FontSize="16" Click="btnconfig_Click">
             <Button.Effect>
                 <DropShadowEffect/>
@@ -53,9 +53,8 @@
             </Image.OpacityMask>
         </Image>
         <Label Content="Username:" HorizontalAlignment="Left" Margin="39,129,0,0" VerticalAlignment="Top" FontSize="16" Height="32" Width="83" Foreground="#FFF7F2F2"/>
-        <TextBox x:Name="txtUsername" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="31,133,0,0" TextWrapping="Wrap" Text="Enter your Name" VerticalAlignment="Top" Width="188" FontSize="16" SelectionBrush="#FF64ACF3"/>
+        <TextBox x:Name="txtUsername" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="31,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" FontSize="16" SelectionBrush="#FF64ACF3" AutomationProperties.HelpText="Enter your Name"/>
         <Label Content="Auftraggeber: &#xD;&#xA;Segelschule OSZ IMT GmbH&#xD;&#xA;Marine Weg 6b &#xD;&#xA;54321 Berlin " Grid.Column="2" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top" Height="96" Width="174" Foreground="#FF363030" FontSize="13"/>
         <Image Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Left" Height="100" Margin="133,0,0,0" VerticalAlignment="Top" Width="90" Source="images/Segelschule OSZ IMT.png"/>
-
     </Grid>
 </Window>

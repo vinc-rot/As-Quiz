@@ -36,7 +36,7 @@
         <Label x:Name="lblProzentPruef" Content="%" HorizontalAlignment="Left" Margin="66,37,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="5" Height="28" Width="23" Grid.Row="3" Background="#FF0F0E0E" Foreground="#FFFBFBFB" Opacity="0.77"/>
         <TextBox x:Name="txtProgrammName" HorizontalAlignment="Left" Height="23" Margin="3,47,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="120" Grid.Column="5" Grid.Row="2" FontSize="14"/>
         <Label Content="Historie:" HorizontalAlignment="Left" Margin="75,20,0,0" VerticalAlignment="Top" FontSize="18" Grid.Column="1" Grid.ColumnSpan="3" Height="29" Width="79" Grid.Row="4" Foreground="#FFFBF8F8" Background="#FF2B2525" Opacity="0.77"/>
-        <Button x:Name="btnhistdelete" Content="Löschen" HorizontalAlignment="Left" Margin="3,26,0,0" VerticalAlignment="Top" Width="75" Background="#FFD4C4C4" Foreground="#FFB40F0F" FontSize="14" FontWeight="Bold" FontStyle="Italic" FontFamily="Segoe WP Black" Grid.Column="5" Height="23" Grid.Row="4"/>
+        <Button x:Name="btnhistdelete" Content="Löschen" HorizontalAlignment="Left" Margin="3,26,0,0" VerticalAlignment="Top" Width="75" Background="#FFD4C4C4" Foreground="#FFB40F0F" FontSize="14" FontWeight="Bold" FontStyle="Italic" FontFamily="Segoe WP Black" Grid.Column="5" Height="23" Grid.Row="4" Click="btnhistdelete_Click_1"/>
         <Button x:Name="btnbacktostart" Content="Speichern und zurück &#xD;&#xA;zum Programm" HorizontalAlignment="Left" Margin="4,91.982,0,0" VerticalAlignment="Top" Width="162" Height="60" Background="#FF1118AA" FontSize="16" Click="btnbacktostart_Click" Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="5">
             <Button.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

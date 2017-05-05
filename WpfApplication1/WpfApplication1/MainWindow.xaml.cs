@@ -20,28 +20,17 @@ namespace WpfApplication1
     /// </summary>
     public partial class MainWindow : Window
     {
+        Fragenbogen fragebogen = new Fragenbogen();
 
         
         public MainWindow()
         {
             InitializeComponent();
-
-
-            
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
-        }
-
-        private void btnStart_Click_1(object sender, RoutedEventArgs e)
-        {
-
-            
-
-           
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -56,11 +45,12 @@ namespace WpfApplication1
 
         private void btnconfig_Click(object sender, RoutedEventArgs e)
         {
-            
+     
+
             Konfiguration konfiguration = new Konfiguration();
             konfiguration.Show();
             this.Close();
-
+         
         }
 
         private void txtUsername_TextChanged_1(object sender, TextChangedEventArgs e)
@@ -83,14 +73,18 @@ namespace WpfApplication1
             }
             else
             {
-
                 Prüfung prüfung = new Prüfung();
                 prüfung.Show();
                 prüfung.lblUsername.Content = txtUsername.Text;
                 this.Close();
-
             }
         }
-   }
+
+        private void listHistorie_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+         
+
+        }
+    }
 }
 
